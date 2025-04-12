@@ -1,68 +1,232 @@
 {
   // 🎨 TEMA, FONTE E INTERFACE
-  "workbench.colorTheme": "Min Dark",
+
+  "workbench.colorTheme": "Vesper",
+  // Define o tema de cores da interface do VS Code para "Vesper".
+  // Opções: Qualquer tema instalado no VS Code.
+
   "workbench.iconTheme": "symbols",
+  // Define o tema de ícones da interface do VS Code para "symbols".
+  // Opções: Qualquer tema de ícones instalado no VS Code.
+
   "editor.fontFamily": "Brass Mono Regular, Monaco, Menlo, 'Courier New', monospace",
-  "editor.fontSize": 12,
+  // Define a família de fontes do editor. Se "Brass Mono Regular" não estiver disponível, usa as outras opções em ordem.
+  // Opções: Qualquer fonte instalada no sistema.
+
+  "editor.fontSize": 15,
+  // Define o tamanho da fonte do editor para 15 pixels.
+  // Opções: Qualquer valor numérico.
+
   "editor.lineHeight": 1.8,
+  // Define a altura da linha do editor para 1.8 vezes o tamanho da fonte.
+  // Opções: Qualquer valor numérico.
+
   "editor.fontLigatures": true,
+  // Habilita ligaduras de fonte (combinações de caracteres em um único glifo).
+  // Opções: true (habilitado), false (desabilitado).
+
   "window.zoomLevel": 3,
+  // Define o nível de zoom da janela do VS Code.
+  // Opções: Qualquer valor numérico (negativo para zoom out, positivo para zoom in).
+
   "editor.tabSize": 2,
+  // Define o tamanho da tabulação para 2 espaços.
+  // Opções: Qualquer valor numérico.
+
   "editor.wordWrap": "on",
+  // Habilita a quebra automática de palavras para evitar rolagem horizontal.
+  // Opções: "on" (habilitado), "off" (desabilitado), "wordWrapColumn" (quebra em uma coluna específica), "bounded" (quebra dentro da área visível).
+
   "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": "explicit",
+  // Define o estilo de piscada do cursor.
+  // Opções: "phase" (piscada gradual), "smooth" (piscada suave), "expand" (expande e retrai), "solid" (sem piscada), "blink" (piscada simples).
+
+  "editor.cursorSmoothCaretAnimation": "on",
+  // Habilita animação suave do cursor ao se mover.
+  // Opções: "on" (habilitado), "off" (desabilitado).
+
   "editor.smoothScrolling": true,
-  "editor.lineNumbers": "relative",
-  "editor.renderLineHighlight": "all",
-  "editor.renderWhitespace": "all",
+  // Habilita a rolagem suave do editor.
+  // Opções: true (habilitado), false (desabilitado).
+
+  "editor.lineNumbers": "on", // Podemos excluir os numeros. 
+  // Aqui de deixar "relative" o numero esaltado.
+  // Define a exibição dos números de linha como relativos à linha atual.
+  // Opções: "on" (números absolutos), "off" (sem números), "relative" (números relativos).
+
+  "editor.renderLineHighlight": "none",// isso destaca a linha. (none = desativa totalmente)
+  // Define como a linha atual é destacada.
+  // Opções: "line" (destaca a linha), "all" (destaca a linha e o número), "none" (sem destaque), "gutter" (destaca o gutter).
+
+  "editor.renderWhitespace": "none",
+  // Define como os espaços em branco são renderizados.
+  // Opções: "none" (sem renderização), "boundary" (renderiza espaços em branco fora das seleções), "selection" (renderiza espaços em branco nas seleções), "all" (renderiza todos os espaços em branco).
+
   "editor.guides.indentation": true,
+  // Habilita guias de indentação.
+  // Opções: true (habilitado), false (desabilitado).
+
   "editor.guides.highlightActiveIndentation": true,
-  "editor.minimap.enabled": false,
-  "editor.minimap.maxColumn": 120,
-  "editor.minimap.renderCharacters": false,
-  "editor.rulers": [80, 120],
+  // Destaca a guia de indentação da linha atual.
+  // Opções: true (habilitado), false (desabilitado).
+
+  "editor.rulers": [],//remove a linha na vertical do VScode 
+  // Remove as réguas verticais do editor.
+  // Opções: Um array de números representando as colunas onde as réguas devem ser exibidas.
+
   "editor.scrollbar.horizontal": "hidden",
+  // Oculta a barra de rolagem horizontal do editor.
+  // Opções: "visible" (visível), "hidden" (oculto), "auto" (oculta quando não necessário).
+
   "editor.scrollbar.vertical": "hidden",
+  // Oculta a barra de rolagem vertical do editor.
+  // Opções: "visible" (visível), "hidden" (oculto), "auto" (oculta quando não necessário).
+
   "editor.glyphMargin": false,
+  // Desabilita a margem de glifos (ícones de depuração, etc.).
+  // Opções: true (habilitado), false (desabilitado).
+
   "editor.folding": false,
+  // Desabilita o recolhimento de código.
+  // Opções: true (habilitado), false (desabilitado).
+
   "editor.showFoldingControls": "never",
+  // Oculta os controles de recolhimento de código.
+  // Opções: "always" (sempre visível), "mouseover" (visível ao passar o mouse), "never" (nunca visível).
+
   "editor.hideCursorInOverviewRuler": true,
+  // Oculta o cursor na régua de visão geral.
+  // Opções: true (habilitado), false (desabilitado).
+
   "editor.occurrencesHighlight": "off",
+  // Desabilita o destaque de ocorrências da palavra selecionada.
+  // Opções: "on" (habilitado), "off" (desabilitado).
+
   "editor.matchBrackets": "never",
+  // Desabilita o destaque de pares de colchetes correspondentes.
+  // Opções: "always" (sempre visível), "never" (nunca visível), "near" (visível perto do cursor).
+
   "editor.bracketPairColorization.enabled": false,
+  // Desabilita a colorização de pares de colchetes.
+  // Opções: true (habilitado), false (desabilitado).
+
   "editor.guides.bracketPairsHorizontal": false,
+  // Desabilita as guias de pares de colchetes horizontais.
+  // Opções: true (habilitado), false (desabilitado).
 
   // 💾 SALVAMENTO E FORMATAÇÃO
+
   "editor.formatOnSave": true,
+  // Formata o arquivo automaticamente ao salvar.
+  // Opções: true (habilitado), false (desabilitado).
+
   "files.autoSave": "onWindowChange",
+  // Salva automaticamente os arquivos ao mudar de janela.
+  // Opções: "off" (desabilitado), "afterDelay" (após um atraso), "onFocusChange" (ao mudar o foco), "onWindowChange" (ao mudar de janela).
+
   "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // Define o formatador padrão para arquivos HTML como "esbenp.prettier-vscode".
+  // Opções: Qualquer formatador instalado no VS Code.
+
   "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // Define o formatador padrão para arquivos CSS como "esbenp.prettier-vscode".
+  // Opções: Qualquer formatador instalado no VS Code.
+
   "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // Define o formatador padrão para arquivos JSON como "esbenp.prettier-vscode".
+  // Opções: Qualquer formatador instalado no VS Code.
+
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // Define o formatador padrão para arquivos JavaScript como "esbenp.prettier-vscode".
+  // Opções: Qualquer formatador instalado no VS Code.
+
   "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // Define o formatador padrão para arquivos JavaScript React como "esbenp.prettier-vscode".
+  // Opções: Qualquer formatador instalado no VS Code.
+
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // Define o formatador padrão para arquivos TypeScript como "esbenp.prettier-vscode".
+  // Opções: Qualquer formatador instalado no VS Code.
 
   // 🧼 VISUAL CLEAN
+
   "workbench.statusBar.visible": false,
+  // Oculta a barra de status.
+  // Opções: true (visível), false (oculto).
+
   "workbench.activityBar.location": "hidden",
+  // Oculta a barra de atividades.
+  // Opções: "left" (esquerda), "right" (direita), "hidden" (oculto).
+
   "workbench.editor.showTabs": "single",
+  // Mostra apenas uma aba por vez no editor.
+  // Opções: "multiple" (várias abas), "single" (uma aba).
+
+  "editor.cursorWidth": 5,// Aumenta a espessura do cursor
+  // Aumenta a espessura do cursor para 5 pixels.
+  // Opções: Qualquer valor numérico.
+
   "workbench.editor.tabActionCloseVisibility": false,
+  // Oculta o botão de fechar das abas do editor.
+  // Opções: true (visível), false (oculto).
+
   "workbench.editor.labelFormat": "short",
+  // Formata os rótulos das abas do editor como curtos.
+  // Opções: "default" (padrão), "short" (curto), "medium" (médio), "long" (longo).
+
   "workbench.startupEditor": "newUntitledFile",
+  // Abre um novo arquivo sem título ao iniciar o VS Code.
+  // Opções: "none" (nenhum), "newUntitledFile" (novo arquivo sem título), "welcomePage" (página de boas-vindas), "readme" (arquivo README).
+
   "workbench.layoutControl.enabled": false,
+  // Desabilita o controle de layout da interface.
+  // Opções: true (habilitado), false (desabilitado).
+
   "breadcrumbs.enabled": false,
+  // Desabilita o breadcrumbs (navegação de caminho de arquivo).
+  // Opções: true (habilitado), false (desabilitado).
+
   "explorer.decorations.colors": false,
+  // Desabilita as decorações de cores no explorador de arquivos.
+  // Opções: true (habilitado), false (desabilitado).
+
   "explorer.compactFolders": false,
+  // Desabilita a compactação de pastas no explorador de arquivos.
+  // Opções: true (habilitado), false (desabilitado).
+
   "workbench.tree.indent": 8,
+  // Define a indentação das árvores de arquivos no explorador para 8 pixels.
+  // Opções: Qualquer valor numérico.
+
   "window.commandCenter": false,
+  // Desabilita a central de comandos na barra de título.
+  // Opções: true (habilitado), false (desabilitado).
+
   "window.title": " ",
+  // Define o título da janela do VS Code como um espaço em branco.
+  // Opções: Qualquer string.
+
   "explorer.confirmDelete": false,
+  // Desabilita a confirmação ao excluir arquivos no explorador.
+  // Opções: true (habilitado), false (desabilitado).
 
   // 🖥️ TERMINAL E EXECUÇÃO DE CÓDIGO
+
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // Define o perfil padrão do terminal integrado para "Git Bash" no Windows.
+  // Opções: Qualquer perfil de terminal instalado no sistema.
+
   "code-runner.runInTerminal": true,
+  // Executa o código no terminal integrado.
+  // Opções: true (habilitado), false (desabilitado).
+
   "code-runner.saveFileBeforeRun": true,
+  // Salva o arquivo antes de executar o código.
+  // Opções: true (habilitado), false (desabilitado).
+
   "code-runner.executorMap": {
+    // Define os executores de código para diferentes linguagens.
+    // Opções: Um objeto JSON contendo as linguagens e seus comandos de execução.
     "javascript": "node",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
@@ -122,15 +286,34 @@
   },
 
   // 🔧 AJUSTES OPCIONAIS DE UI (aparência avançada, se usar extensão APC)
+
   "apc.electron": {
     "titleBarStyle": "hiddenInset"
   },
+  // Define o estilo da barra de título da janela (usado pela extensão APC).
+  // Opções: "default" (padrão), "hidden" (oculto), "hiddenInset" (oculto com inset).
+
   "apc.stylesheet": {
     ".title-label > h2": "display: none",
     ".pane-body": "padding: 8px",
     ".pane-header": "padding: 0 8px"
   },
+  // Define estilos CSS personalizados para a interface (usado pela extensão APC).
+  // Opções: Qualquer estilo CSS válido.
+
   "apc.listRow": {
     "height": 24
+  },
+  // Define a altura das linhas das listas na interface (usado pela extensão APC).
+  // Opções: Qualquer valor numérico.
+
+  "workbench.sideBar.location": "right",
+  // Define a localização da barra lateral.
+  // Opções: "left" (esquerda), "right" (direita).
+
+  "editor.semanticTokenColorCustomizations": {
+
   }
+  // Permite personalizar as cores dos tokens semânticos (usado para destaque de sintaxe avançado).
+  // Opções: Um objeto JSON contendo as regras de colorização.
 }
