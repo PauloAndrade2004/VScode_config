@@ -53,6 +53,7 @@
   "breadcrumbs.enabled": false,
   "explorer.decorations.colors": false,
   "explorer.compactFolders": false,
+  "workbench.tree.indent": 8,
   "window.commandCenter": false,
   "window.title": " ",
   "explorer.confirmDelete": false,
