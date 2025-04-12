@@ -1,8 +1,8 @@
 {
   "editor.cursorSmoothCaretAnimation": "explicit",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "symbols",
   "editor.fontFamily": "Brass Mono Regular",
-  "workbench.colorTheme": "SynthWave '84",
+  "workbench.colorTheme": "Min Dark",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
 
   "code-runner.runInTerminal": true,
@@ -56,8 +56,7 @@
     "sass": "sass --style expanded",
     "scss": "scss --style expanded",
     "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
-    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "sml": "cd $dir && sml $fileName",
@@ -68,14 +67,17 @@
     "gleam": "gleam run -m $fileNameWithoutExt"
   },
 
-  // 💡 VISUAIS DE CÓDIGO
+  //  VISUAIS DE CÓDIGO
   "editor.lineNumbers": "relative",
   "editor.renderLineHighlight": "all",//Destacando a linha inteira 
   "editor.renderWhitespace": "all",
   "editor.guides.indentation": true,
   "editor.guides.highlightActiveIndentation": true,
+  "workbench.editor.labelFormat": "short",
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": false,
 
-  // 🌟 MELHORIAS VISUAIS E UX ADICIONAIS
+  //  MELHORIAS VISUAIS E UX ADICIONAIS
   "editor.smoothScrolling": true,
   "editor.cursorBlinking": "phase",
   "editor.minimap.enabled": true,
@@ -84,6 +86,25 @@
   "workbench.statusBar.visible": true,
   "window.zoomLevel": 0,
   "explorer.confirmDelete": false,
-  "breadcrumbs.enabled": true,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+
+  // ⚙️ CONFIGURAÇÕES ADICIONAIS
+  
+  "editor.fontSize": 12,
+  "editor.lineHeight": 1.8,
+  "editor.rulers": [80, 120],
+  "workbench.startupEditor": "newUntitledFile",
+  //"editor.renderLineHighlight": "gutter",
+  "editor.fontLigatures": true,
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset"
+  },
+  "apc.stylesheet": {
+    ".title-label > h2": "display: none",
+    ".pane-body": "padding: 8px",
+    ".pane-header": "padding: 0 8px"
+  },
+  "apc.listRow": {
+    "height": 24
+  }
 }
