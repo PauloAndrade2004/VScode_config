@@ -158,7 +158,7 @@
   // Oculta a barra de atividades.
   // Opções: "left" (esquerda), "right" (direita), "hidden" (oculto).
 
-  "workbench.editor.showTabs": "single",
+  "workbench.editor.showTabs": "multiple",
   // Mostra apenas uma aba por vez no editor.
   // Opções: "multiple" (várias abas), "single" (uma aba).
 
