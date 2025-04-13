@@ -1,96 +1,244 @@
 {
+  // Tema de ícones usado no VS Code
   "workbench.iconTheme": "vscode-icons",
+
+  // Tema de cores utilizado no VS Code
   "workbench.colorTheme": "Dracula At Night",
 
   // 🔁 Configuração do Code Runner
-  "code-runner.runInTerminal": true,
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.preserveFocus": false,
-  "code-runner.ignoreSelection": true,
-  "editor.cursorWidth": 5,
-  "workbench.statusBar.visible": false,
-  "explorer.compactFolders": false,
-  "workbench.tree.indent": 8,
-  "editor.smoothScrolling": true,
-  "editor.lineNumbers": "on", 
-  "editor.guides.indentation": true,
-  "editor.rulers": [],
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.guides.bracketPairsHorizontal": false,
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.formatOnSave": true,
-  "files.autoSave": "onWindowChange",
-  "workbench.startupEditor": "newUntitledFile",
-  "explorer.decorations.colors": false,
-  "window.title": " ",
-  "window.commandCenter": false,
-  "editor.guides.highlightActiveIndentation": true,
-  "editor.lineHeight": 1.8,
-  "editor.fontSize": 14,
+  "code-runner.runInTerminal": true,  // O código será executado no terminal integrado.
+  "code-runner.saveFileBeforeRun": true,  // O arquivo será salvo automaticamente antes de ser executado.
+  "code-runner.clearPreviousOutput": true,  // Limpa a saída do terminal antes de executar o código.
+  "code-runner.preserveFocus": false,  // Não mantém o foco no terminal após a execução.
+  "code-runner.ignoreSelection": true,  // Ignora qualquer seleção no editor e executa o arquivo inteiro.
   
-  
+  // Personalização do cursor no editor
+  "editor.cursorWidth": 5,  // A largura do cursor será de 5 pixels.
 
- "code-runner.executorMap": {
-    // Define os executores de código para diferentes linguagens.
-    // Opções: Um objeto JSON contendo as linguagens e seus comandos de execução.
+  // Esconde a barra de status do VS Code
+  "workbench.statusBar.visible": false,
+
+  // Desabilita a compactação de pastas no explorador de arquivos
+  "explorer.compactFolders": false,
+
+  // Define a indentação das árvores de arquivos
+  "workbench.tree.indent": 8,
+
+  // Habilita o rolar suave no editor de texto
+  "editor.smoothScrolling": true,
+
+  // Exibe os números das linhas no editor
+  "editor.lineNumbers": "on",
+
+  // Exibe as guias de indentação no editor
+  "editor.guides.indentation": true,
+
+  // Remove as regras de exibição de colunas verticais
+  "editor.rulers": [],
+
+  // Esconde a barra de rolagem horizontal
+  "editor.scrollbar.horizontal": "hidden",
+
+  // Desabilita as guias horizontais para pares de chaves
+  "editor.guides.bracketPairsHorizontal": false,
+
+  // Esconde o cursor na visão geral do editor
+  "editor.hideCursorInOverviewRuler": true,
+
+  // Formatação automática ao salvar o arquivo
+  "editor.formatOnSave": true,
+
+  // Configura para salvar automaticamente quando a janela for alterada
+  "files.autoSave": "onWindowChange",
+
+  // Inicia o editor com um arquivo em branco não salvo
+  "workbench.startupEditor": "newUntitledFile",
+
+  // Desabilita a decoração colorida das pastas no explorador de arquivos
+  "explorer.decorations.colors": false,
+
+  // Modifica o título da janela para ser vazio
+  "window.title": " ",
+
+  // Desabilita o centro de comando da janela
+  "window.commandCenter": false,
+
+  // Destaca a indentação ativa no editor
+  "editor.guides.highlightActiveIndentation": true,
+
+  // Define a altura das linhas do editor como 1.8
+  "editor.lineHeight": 1.8,
+
+  // Define o tamanho da fonte do editor como 14
+  "editor.fontSize": 14,
+
+  // Mapear os executores de código para diferentes linguagens no Code Runner
+  "code-runner.executorMap": {
+    // Para executar JavaScript com Node.js
     "javascript": "node",
+    
+    // Para compilar e rodar código Java com javac e java
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    
+    // Para compilar e rodar código C com gcc
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    
+    // Para rodar código Zig
     "zig": "zig run",
+    
+    // Para compilar e rodar código C++ com g++
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    
+    // Para compilar e rodar código Objective-C com gcc
     "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    
+    // Para rodar código PHP
     "php": "php",
+    
+    // Para rodar código Python
     "python": "clear && python -u $fullFileName",
+    
+    // Para rodar código Perl
     "perl": "perl",
+    
+    // Para rodar código Perl 6
     "perl6": "perl6",
+    
+    // Para rodar código Ruby
     "ruby": "ruby",
+    
+    // Para rodar código Go
     "go": "go run",
+    
+    // Para rodar código Lua
     "lua": "lua",
+    
+    // Para rodar código Groovy
     "groovy": "groovy",
+    
+    // Para rodar PowerShell
     "powershell": "powershell -ExecutionPolicy ByPass -File",
+    
+    // Para rodar arquivos .bat
     "bat": "cmd /c",
+    
+    // Para rodar scripts em Shell
     "shellscript": "bash",
+    
+    // Para rodar código F# com fsi
     "fsharp": "fsi",
+    
+    // Para rodar código C# com scriptcs
     "csharp": "scriptcs",
+    
+    // Para rodar código VBScript
     "vbscript": "cscript //Nologo",
+    
+    // Para rodar código TypeScript com ts-node
     "typescript": "ts-node",
+    
+    // Para rodar CoffeeScript com coffee
     "coffeescript": "coffee",
+    
+    // Para rodar código Scala
     "scala": "scala",
+    
+    // Para rodar código Swift
     "swift": "swift",
+    
+    // Para rodar código Julia
     "julia": "julia",
+    
+    // Para rodar código Crystal
     "crystal": "crystal",
+    
+    // Para rodar código OCaml
     "ocaml": "ocaml",
+    
+    // Para rodar código R com Rscript
     "r": "Rscript",
+    
+    // Para rodar código AppleScript
     "applescript": "osascript",
+    
+    // Para rodar código Clojure com lein
     "clojure": "lein exec",
+    
+    // Para rodar código Haxe
     "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    
+    // Para rodar código Rust
     "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    
+    // Para rodar código Racket
     "racket": "racket",
+    
+    // Para rodar código Scheme
     "scheme": "csi -script",
+    
+    // Para rodar AutoHotkey
     "ahk": "autohotkey",
+    
+    // Para rodar AutoIt
     "autoit": "autoit3",
+    
+    // Para rodar código Dart
     "dart": "dart",
+    
+    // Para compilar e rodar código Pascal com fpc
     "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    
+    // Para compilar e rodar código D com dmd
     "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    
+    // Para rodar código Haskell com runghc
     "haskell": "runghc",
+    
+    // Para rodar código Nim
     "nim": "nim compile --verbosity:0 --hints:off --run",
+    
+    // Para rodar código Lisp com sbcl
     "lisp": "sbcl --script",
+    
+    // Para rodar código Kit
     "kit": "kitc --run",
+    
+    // Para rodar código V
     "v": "v run",
+    
+    // Para rodar código Sass
     "sass": "sass --style expanded",
+    
+    // Para rodar código SCSS
     "scss": "scss --style expanded",
+    
+    // Para rodar código Less
     "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    
+    // Para compilar e rodar código Fortran (formas livre e fixa) com gfortran
     "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    
+    // Para rodar código SML com sml
     "sml": "cd $dir && sml $fileName",
+    
+    // Para rodar código Mojo
     "mojo": "mojo run",
+    
+    // Para rodar código Erlang com escript
     "erlang": "escript",
+    
+    // Para rodar código Spwn
     "spwn": "spwn build",
+    
+    // Para rodar código PKL
     "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+    
+    // Para rodar código Gleam
     "gleam": "gleam run -m $fileNameWithoutExt"
   },
 
+  // Define o perfil padrão do terminal como Git Bash no Windows
   "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
